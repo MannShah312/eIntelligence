@@ -6,7 +6,7 @@ dotenv.config();
 import checkBrandRouter from './routes/checkBrand.js';
 
 const app = express();
-const port = 8000;
+const port = 8000 || process.env.PORT;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
